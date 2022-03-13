@@ -1,10 +1,25 @@
 import { useEffect, useState } from "react";
 import data from "./data/data.json";
 
-const numbers = data.map((o) => o.id);
+const numbers = [[], [], [], [], [], []] as any[][];
+data.forEach((o) => {
+	let categorie = Math.floor(o.id / 100) - 1;
+	if (categorie === 5) {
+		return;
+	}
+	if (categorie === 6) {
+		categorie = 5;
+	}
+	numbers[categorie].push(o.id);
+});
 
-const getRandom4Numbers = () =>
-	[0, 0, 0, 0].map((o) => numbers[Math.floor(Math.random() * numbers.length)]);
+console.log(numbers);
+
+const getRandom4Numbers = () => {
+	const categorie = Math.floor(Math.random() * numbers.length);
+	const shuffled = [...numbers[categorie]].sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, 4);
+};
 
 function App() {
 	const [chosenNumbers, setChosenNumbers] = useState(getRandom4Numbers());
