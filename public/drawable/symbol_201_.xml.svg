@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
-<svg height="5.29299975.29299975.29299975.29299975.29299975.29299975.29299975.29299975.29299975.2929997" viewBox="0 0 5.292998 5.2929997" width="5.2929985.2929985.2929985.2929985.2929985.2929985.2929985.2929985.2929985.292998" xmlns="http://www.w3.org/2000/svg">
-  <path d="m0.62619,4.12391 l0.85454,-0.11317" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m4.49162,4.16016 l-0.85208,-0.13039" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m0.60432,3.38596 l0.8604,0.0525" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m0.72845,2.66889 l0.8252,0.24917" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m1.04137,2.00591 l0.71081,0.48764" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m1.55496,1.48933 l0.48599,0.71194" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m2.22759,1.20562 l0.16877,0.84531" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m2.9563,1.21053 l-0.1806,0.84287" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m3.62398,1.50497 l-0.49929,0.70267" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m4.12639,2.03259 l-0.72222,0.47057" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m4.4227,2.70258 l-0.83111,0.22869" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m4.52959,3.42255 l-0.86138,0.0327" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.17999999"/>
-  <path d="m0.63801,4.21313c-0.539,-4.07 4.466,-4.055 3.84,0.036" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.52499998"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="132.32495" height="132.3249925" viewBox="0 0 5.292998 5.2929997">
+  <path d="m0.62619,4.12391 l0.85454,-0.11317" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m4.49162,4.16016 l-0.85208,-0.13039" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m0.60432,3.38596 l0.8604,0.0525" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m0.72845,2.66889 l0.8252,0.24917" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m1.04137,2.00591 l0.71081,0.48764" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m1.55496,1.48933 l0.48599,0.71194" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m2.22759,1.20562 l0.16877,0.84531" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m2.9563,1.21053 l-0.1806,0.84287" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m3.62398,1.50497 l-0.49929,0.70267" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m4.12639,2.03259 l-0.72222,0.47057" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m4.4227,2.70258 l-0.83111,0.22869" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m4.52959,3.42255 l-0.86138,0.0327" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.17999999" stroke="#000000"/>
+  <path d="m0.63801,4.21313c-0.539,-4.07 4.466,-4.055 3.84,0.036" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.52499998" stroke="#000000"/>
 </svg>

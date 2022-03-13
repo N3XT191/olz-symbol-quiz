@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<svg height="5.3979985.3979985.3979985.3979985.3979985.3979985.3979985.3979985.3979985.397998" viewBox="0 0 5.3980017 5.397998" width="5.39800175.39800175.39800175.39800175.39800175.39800175.39800175.39800175.39800175.3980017" xmlns="http://www.w3.org/2000/svg">
-  <path d="m0.65412,0.29726v2.727h3.15699v-2.727h-3.3z" fill="#595959" stroke="#00000000" stroke-width="0.04233333"/>
-  <path d="m0.55882,3.67303h2.296v1.43499h-2.27846z" fill="#000000" stroke="#00000000" stroke-width="0.04233333"/>
-  <path d="m0.65412,0.29726v2.727h3.157v-2.727h-3.3" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.29999998"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="134.9500425" height="134.94995" viewBox="0 0 5.3980017 5.397998">
+  <path d="m0.65412,0.29726v2.727h3.15699v-2.727h-3.3z" fill="#595959" stroke-width="0.04233333" stroke="#00000000"/>
+  <path d="m0.55882,3.67303h2.296v1.43499h-2.27846z" fill="#000000" stroke-width="0.04233333" stroke="#00000000"/>
+  <path d="m0.65412,0.29726v2.727h3.157v-2.727h-3.3" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.29999998" stroke="#000000"/>
   <path d="m4.22346,3.8019l0.75,0l0,0.75l-0.75,0z" fill="#000000" stroke="#00000000"/>
 </svg>

@@ -8,7 +8,12 @@ Usage: drop one or more vector drawable onto this script to convert them to svg 
 """
 
 from xml.dom.minidom import *
+import glob
+import os
 import sys
+
+SOURCE = 'src/data/drawable/*'
+DESTINATION = 'public/drawable/'
 
 # extracts all paths inside vdContainer and add them into svgContainer
 def convertPaths(vdContainer,svgContainer,svgXml):
@@ -35,7 +40,7 @@ def convertPaths(vdContainer,svgContainer,svgXml):
 			svgContainer.appendChild(svgPath);
 		
 # define the function which converts a vector drawable to a svg
-def convertVd(vdFilePath):
+def convertVd(vdFilePath, svgFilePath = None):
 
 	# create svg xml
 	svgXml = Document()
@@ -48,8 +53,8 @@ def convertVd(vdFilePath):
 
 	# setup basic svg info
 	svgNode.attributes['xmlns'] = 'http://www.w3.org/2000/svg'
-	svgNode.attributes['width'] = float(vdNode.attributes['android:viewportWidth'].value)*10
-	svgNode.attributes['height'] = float(vdNode.attributes['android:viewportHeight'].value)*10
+	svgNode.attributes['width'] = str(float(vdNode.attributes['android:viewportWidth'].value)*25)
+	svgNode.attributes['height'] = str(float(vdNode.attributes['android:viewportHeight'].value)*25)
 	svgNode.attributes['viewBox'] = '0 0 {} {}'.format(vdNode.attributes['android:viewportWidth'].value, vdNode.attributes['android:viewportHeight'].value)
 
 	# iterate through all groups
@@ -73,14 +78,12 @@ def convertVd(vdFilePath):
 	convertPaths(vdNode,svgNode,svgXml)
 
 	# write xml to file
-	svgXml.writexml(open(vdFilePath + '.svg', 'w'),indent="",addindent="  ",newl='\n')
+	if svgFilePath is None:
+		svgFilePath = vdFilePath + '.svg'
+	svgXml.writexml(open(svgFilePath, 'w'),indent="",addindent="  ",newl='\n')
 	
 # script begin
-if len(sys.argv)>1:
-	iterArgs = iter(sys.argv)
-	next(iterArgs) #skip the first entry (it's the name of the script)
-	for arg in iterArgs:
-		convertVd(arg)
-else:
-	print("You have to pass me something")
-	sys.exit()
+for vd_path in glob.glob(SOURCE):
+	svg_path = os.path.join(DESTINATION, os.path.basename(vd_path) + '.svg')
+	print(vd_path, svg_path)
+	convertVd(vd_path, svg_path)

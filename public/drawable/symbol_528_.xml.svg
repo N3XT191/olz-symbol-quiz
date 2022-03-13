@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<svg height="5.3979985.3979985.3979985.3979985.3979985.3979985.3979985.3979985.3979985.397998" viewBox="0 0 5.3980017 5.397998" width="5.39800175.39800175.39800175.39800175.39800175.39800175.39800175.39800175.39800175.3980017" xmlns="http://www.w3.org/2000/svg">
-  <path d="m-0.07294,5.49799 l5.94461,-5.94461" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.22764009"/>
-  <path d="m1.63461,3.79041h-0.74812" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.20999999"/>
-  <path d="m1.63461,3.79041 l0.00071,0.74884" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.20999999"/>
-  <path d="M4.16411,1.26093L3.41599,1.26093" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.20999999"/>
-  <path d="m4.16411,1.26093 l0.00071,0.74882" fill="#00000000" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.20999999"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="134.9500425" height="134.94995" viewBox="0 0 5.3980017 5.397998">
+  <path d="m-0.07294,5.49799 l5.94461,-5.94461" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.22764009" stroke="#000000"/>
+  <path d="m1.63461,3.79041h-0.74812" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.20999999" stroke="#000000"/>
+  <path d="m1.63461,3.79041 l0.00071,0.74884" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.20999999" stroke="#000000"/>
+  <path d="M4.16411,1.26093L3.41599,1.26093" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.20999999" stroke="#000000"/>
+  <path d="m4.16411,1.26093 l0.00071,0.74882" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.20999999" stroke="#000000"/>
 </svg>
