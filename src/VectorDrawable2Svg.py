@@ -48,8 +48,8 @@ def convertVd(vdFilePath):
 
 	# setup basic svg info
 	svgNode.attributes['xmlns'] = 'http://www.w3.org/2000/svg'
-	svgNode.attributes['width'] = vdNode.attributes['android:viewportWidth'].value*10
-	svgNode.attributes['height'] = vdNode.attributes['android:viewportHeight'].value*10
+	svgNode.attributes['width'] = float(vdNode.attributes['android:viewportWidth'].value)*10
+	svgNode.attributes['height'] = float(vdNode.attributes['android:viewportHeight'].value)*10
 	svgNode.attributes['viewBox'] = '0 0 {} {}'.format(vdNode.attributes['android:viewportWidth'].value, vdNode.attributes['android:viewportHeight'].value)
 
 	# iterate through all groups
