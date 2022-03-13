@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<svg height="5.0229985.0229985.0229985.0229985.0229985.0229985.0229985.0229985.0229985.022998" viewBox="0 0 5.023002 5.022998" width="5.0230025.0230025.0230025.0230025.0230025.0230025.0230025.0230025.0230025.023002" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="125.57505" height="125.57495" viewBox="0 0 5.023002 5.022998">
   <g>
-    <path d="M0.53322,-0.18162L0.53322,5.19059" fill="#00000000" stroke="#3dff17" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.18290363"/>
-    <path d="M1.79322,-0.18162L1.79322,5.19059" fill="#00000000" stroke="#3dff17" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.18290363"/>
-    <path d="M3.05322,-0.18162L3.05322,5.19059" fill="#00000000" stroke="#3dff17" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.18290363"/>
-    <path d="M4.31322,-0.18162L4.31322,5.19059" fill="#00000000" stroke="#3dff17" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="0.18290363"/>
+    <path d="M0.53322,-0.18162L0.53322,5.19059" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.18290363" stroke="#3dff17"/>
+    <path d="M1.79322,-0.18162L1.79322,5.19059" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.18290363" stroke="#3dff17"/>
+    <path d="M3.05322,-0.18162L3.05322,5.19059" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.18290363" stroke="#3dff17"/>
+    <path d="M4.31322,-0.18162L4.31322,5.19059" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.18290363" stroke="#3dff17"/>
   </g>
 </svg>
