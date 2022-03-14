@@ -1,6 +1,26 @@
 import { useEffect, useState } from "react";
 import data from "./data/data.json";
 
+function shuffle(array: any[]) {
+	let currentIndex = array.length,
+		randomIndex;
+
+	// While there remain elements to shuffle...
+	while (currentIndex !== 0) {
+		// Pick a remaining element...
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [
+			array[randomIndex],
+			array[currentIndex],
+		];
+	}
+
+	return array;
+}
+
 const numbers = [[], [], [], [], [], []] as any[][];
 data.forEach((o) => {
 	let categorie = Math.floor(o.id / 100) - 1;
@@ -17,7 +37,7 @@ console.log(numbers);
 
 const getRandom4Numbers = (category: number) => {
 	if (category === 99) category = Math.floor(Math.random() * numbers.length);
-	const shuffled = [...numbers[category]].sort(() => 0.5 - Math.random());
+	const shuffled = shuffle([...numbers[category]]);
 	return shuffled.slice(0, 4);
 };
 

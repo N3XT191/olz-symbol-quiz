@@ -134,18 +134,22 @@
 		"name": "Prominent water feature",
 		"german_name": "Markantes besonderes Gewässerobjekt"
 	},
+	{ "id": 401, "name": "Open land", "german_name": "Offenes Gebiet" },
 	{
-		"id": 401,
-		"name": "Open land",
-		"german_name": "Offenes Gebiet / Kulturland"
+		"id": 402,
+		"name": "Open land with scattered trees",
+		"german_name": "Offenes Gebiet mit einzelnen Bäumen"
 	},
-
 	{
 		"id": 403,
 		"name": "Rough open land",
 		"german_name": "Raues offenes Gebiet"
 	},
-
+	{
+		"id": 404,
+		"name": "Rough open land with scattered trees",
+		"german_name": "Raues offenes Gebiet mit einzelnen Bäumen"
+	},
 	{ "id": 405, "name": "Forest", "german_name": "Wald" },
 	{
 		"id": 406,
@@ -176,6 +180,13 @@
 		"id": 411,
 		"name": "Vegetation, impassable",
 		"german_name": "Vegetation, unpassierbar"
+	},
+	{ "id": 412, "name": "Cultivated land", "german_name": "Kulturland" },
+	{ "id": 413, "name": "Orchard", "german_name": "Obstgarten" },
+	{
+		"id": 414,
+		"name": "Vineyard or similar",
+		"german_name": "Rebberg oder Ähnliches"
 	},
 	{
 		"id": 415,
