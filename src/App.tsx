@@ -36,13 +36,29 @@ function App() {
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				width: "100%",
+				margin: "auto",
 				alignItems: "center",
 				paddingLeft: 5,
 				paddingRight: 5,
+				maxWidth: 332,
 			}}
 		>
-			<h1>OLZ Symbol Quiz</h1>
+			<div
+				style={{
+					backgroundColor: "#00c800",
+					width: "100%",
+					height: 70,
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					fontSize: 35,
+					fontWeight: 500,
+					marginBottom: 10,
+					color: "#fff404",
+				}}
+			>
+				OLZ Symbol Quiz
+			</div>
 			{(!showAll && category === 99) ||
 			(!showAll && category !== null && category < 7 && category >= 0) ? (
 				<Quiz category={category} />
