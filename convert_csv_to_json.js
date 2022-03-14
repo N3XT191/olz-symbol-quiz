@@ -11,12 +11,6 @@ var array = csv.toString().split("\n");
 // converted to JSON objects which
 // will be added to result in an array
 let result = [];
-
-// The array[0] contains all the
-// header columns so we store them
-// in headers array
-let headers = array[0].split(", ");
-
 // Since headers are separated, we
 // need to traverse remaining n-1 rows.
 for (let i = 1; i < array.length - 1; i++) {

@@ -84,7 +84,6 @@ const Quiz = ({ category }: { category: number }) => {
 				<button
 					style={{ fontSize: 15, marginRight: 10 }}
 					onClick={() => {
-						const params = new URLSearchParams(window.location.search);
 						window.location.search = "";
 					}}
 				>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import data from "./data/data.json";
 
 const numbers = [[], [], [], [], [], []] as any[][];
