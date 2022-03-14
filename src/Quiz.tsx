@@ -147,7 +147,9 @@ const Quiz = ({ category }: { category: number }) => {
 									display: "flex",
 									justifyContent: "center",
 									alignItems: "center",
-									backgroundColor: wrongGuesses[i] ? "red" : "white",
+									backgroundColor: wrongGuesses[i]
+										? "red"
+										: "rgb(256,256,256,0.4)",
 									margin: 5,
 									padding: 5,
 
@@ -178,6 +180,7 @@ const Quiz = ({ category }: { category: number }) => {
 							alignItems: "center",
 							padding: 5,
 							flexWrap: "wrap",
+							backgroundColor: "rgb(256,256,256,0.6)",
 						}}
 					>
 						{data.find((o) => o.id === chosenNumbers[0])?.german_name}
@@ -186,7 +189,9 @@ const Quiz = ({ category }: { category: number }) => {
 						{shuffledNumbers.map((n, i) => (
 							<div
 								style={{
-									backgroundColor: wrongGuesses[i] ? "red" : "white",
+									backgroundColor: wrongGuesses[i]
+										? "red"
+										: "rgb(256,256,256,0.4)",
 									border: "2px solid " + (wrongGuesses[i] ? "red" : "black"),
 									height: 75,
 									width: 75,

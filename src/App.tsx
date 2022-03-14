@@ -40,7 +40,7 @@ function App() {
 				alignItems: "center",
 				paddingLeft: 5,
 				paddingRight: 5,
-				maxWidth: 332,
+				maxWidth: 500,
 			}}
 		>
 			<div
