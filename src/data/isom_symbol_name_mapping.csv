@@ -46,10 +46,8 @@ ID,Name,Name German
 312,Spring,Quelle
 313,Prominent water feature,Markantes besonderes Gewässerobjekt
 4,Vegetation,Vegetation
-401,Open land,Offenes Gebiet
-402,Open land with scattered trees,Offenes Gebiet mit einzelnen Bäumen
+401,Open land,Offenes Gebiet / Kulturland
 403,Rough open land,Raues offenes Gebiet
-404,Rough open land with scattered trees,Raues offenes Gebiet mit einzelnen Bäumen
 405,Forest,Wald
 406,"Vegetation, slow running","Vegetation, leichte Laufbehinderung"
 407,"Vegetation, slow running, good visibility","Bodenvegetation, leichte Laufbehinderung, gute Sicht"
@@ -57,9 +55,6 @@ ID,Name,Name German
 409,"Vegetation, walk, good visibility","Bodenvegetation, starke Laufbehinderung, gute Sicht"
 410,"Vegetation, fight","Vegetation, sehr starke Laufbehinderung"
 411,"Vegetation, impassable","Vegetation, unpassierbar"
-412,Cultivated land,Kulturland
-413,Orchard,Obstgarten
-414,Vineyard or similar,Rebberg oder Ähnliches
 415,Distinct cultivation boundary,Deutliche Kulturgrenze
 416,Distinct vegetation boundary,Deutliche Vegetationsgrenze
 417,Prominent large tree,Markanter grosser Baum

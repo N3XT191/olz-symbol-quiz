@@ -1,62 +1,35 @@
-import { useEffect, useState } from "react";
-import data from "./data/data.json";
+import Quiz from "./Quiz";
+import ShowAll from "./ShowAll";
 
-const numbers = [[], [], [], [], [], []] as any[][];
-data.forEach((o) => {
-	let categorie = Math.floor(o.id / 100) - 1;
-	if (categorie === 5) {
-		return;
-	}
-	if (categorie === 6) {
-		categorie = 5;
-	}
-	numbers[categorie].push(o.id);
-});
-
-console.log(numbers);
-
-const getRandom4Numbers = () => {
-	const categorie = Math.floor(Math.random() * numbers.length);
-	const shuffled = [...numbers[categorie]].sort(() => 0.5 - Math.random());
-	return shuffled.slice(0, 4);
-};
+const buttonTexts = [
+	"Alle",
+	"Geländeformen",
+	"Felsen und Steine",
+	"Gewässer und Sümpfe",
+	"Vegetation",
+	"Künstliche Objekte",
+	"Bahnsymbole",
+];
 
 function App() {
-	const [chosenNumbers, setChosenNumbers] = useState(getRandom4Numbers());
-	const [correctGuessCount, setCorrectGuessCount] = useState(0);
-	const [wrongGuessCount, setWrongGuessCount] = useState(0);
-	const [shuffledNumbers, setShuffledNumbers] = useState(
-		[...chosenNumbers].sort((a, b) => 0.5 - Math.random())
-	);
+	let search = window.location.search;
+	let params = new URLSearchParams(search);
+	let category;
+	if (params.get("category") !== null) {
+		category = parseInt(params.get("category")!);
+	} else {
+		category = null;
+	}
 
-	useEffect(
-		() =>
-			setShuffledNumbers(
-				[...chosenNumbers].sort((a, b) => 0.5 - Math.random())
-			),
-		[chosenNumbers]
-	);
+	const showAll = params.get("showAll") === "true";
 
-	const [wrongGuesses, setWrongGuesses] = useState([
-		false,
-		false,
-		false,
-		false,
-	]);
+	console.log(category);
 
-	const onWrongGuess = (index: number) => {
-		let newWrongGuesses = [...wrongGuesses];
-		newWrongGuesses[index] = true;
-		setWrongGuesses(newWrongGuesses);
-		setWrongGuessCount(wrongGuessCount + 1);
+	const setCategory = (i: number) => {
+		if (i < 0) i = 99;
+		params.set("category", "" + i);
+		window.location.search = params.toString();
 	};
-	const onCorrectGuess = () => {
-		setChosenNumbers(getRandom4Numbers());
-		setWrongGuesses([false, false, false, false]);
-		setCorrectGuessCount(correctGuessCount + 1);
-	};
-
-	const [mode, setMode] = useState<"pic" | "desc">("pic");
 
 	return (
 		<div
@@ -70,110 +43,42 @@ function App() {
 			}}
 		>
 			<h1>OLZ Symbol Quiz</h1>
-			<div>
-				<button
-					style={{ fontSize: 15, marginRight: 10 }}
-					onClick={() => {
-						setMode("pic");
-						onCorrectGuess();
+			{(!showAll && category === 99) ||
+			(!showAll && category !== null && category < 7 && category >= 0) ? (
+				<Quiz category={category} />
+			) : !showAll ? (
+				<div
+					style={{
+						display: "flex",
+						flexDirection: "column",
+						justifyContent: "center",
+						alignItems: "center",
 					}}
-					disabled={mode === "pic"}
 				>
-					Symbol
-				</button>
-				<button
-					style={{ fontSize: 15 }}
-					onClick={() => {
-						setMode("desc");
-						onCorrectGuess();
-					}}
-					disabled={mode === "desc"}
-				>
-					Name
-				</button>
-			</div>
-			<div style={{ margin: 5 }}>
-				Richtige Antworten: {correctGuessCount}, Falsche Antwortern:{" "}
-				{wrongGuessCount}
-			</div>
-			{mode === "pic" ? (
-				<>
-					<img
-						alt="test"
-						src={"/drawable/symbol_" + chosenNumbers[0] + "_.xml.svg"}
-						width={200}
-						height={200}
-					/>
-					<div style={{ width: 364, display: "flex", flexWrap: "wrap" }}>
-						{shuffledNumbers.map((n, i) => (
-							<div
-								style={{
-									width: 160,
-									height: 80,
-									border: "1px solid black",
-									display: "flex",
-									justifyContent: "center",
-									alignItems: "center",
-									backgroundColor: wrongGuesses[i] ? "red" : "white",
-									margin: 5,
-									padding: 5,
-								}}
-								onClick={() => {
-									if (n === chosenNumbers[0]) {
-										onCorrectGuess();
-									} else if (!wrongGuesses[i]) {
-										onWrongGuess(i);
-									}
-								}}
-							>
-								{data.find((o) => o.id === n)?.german_name}
-							</div>
-						))}
-					</div>
-				</>
-			) : (
-				<>
-					<div
-						style={{
-							width: 170,
-							height: 85,
-							border: "1px solid black",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
+					{buttonTexts.map((s, i) => (
+						<button
+							style={{ fontSize: 15, marginBottom: 10 }}
+							onClick={() => setCategory(i - 1)}
+						>
+							{s}
+						</button>
+					))}
+					<div>oder</div>
+					<button
+						style={{ fontSize: 15, marginTop: 10 }}
+						onClick={() => {
+							let search = window.location.search;
+							let params = new URLSearchParams(search);
+
+							params.set("showAll", "true");
+							window.location.search = params.toString();
 						}}
 					>
-						{data.find((o) => o.id === chosenNumbers[0])?.german_name}
-					</div>
-					<div style={{ width: 200, display: "flex", flexWrap: "wrap" }}>
-						{shuffledNumbers.map((n, i) => (
-							<div
-								style={{
-									backgroundColor: wrongGuesses[i] ? "red" : "white",
-									border: "2px solid " + (wrongGuesses[i] ? "red" : "black"),
-									height: 75,
-									width: 75,
-									margin: 5,
-									padding: 5,
-								}}
-							>
-								<img
-									alt="test"
-									src={"/drawable/symbol_" + n + "_.xml.svg"}
-									width={75}
-									height={75}
-									onClick={() => {
-										if (n === chosenNumbers[0]) {
-											onCorrectGuess();
-										} else if (!wrongGuesses[i]) {
-											onWrongGuess(i);
-										}
-									}}
-								/>
-							</div>
-						))}
-					</div>
-				</>
+						Alle Symbole auflisten
+					</button>
+				</div>
+			) : (
+				<ShowAll />
 			)}
 		</div>
 	);
