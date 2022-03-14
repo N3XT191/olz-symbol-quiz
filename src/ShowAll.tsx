@@ -51,15 +51,17 @@ const ShowAll = () => {
 						marginBottom: 5,
 					}}
 				>
-					{makeSVG(n, 100)}
+					{makeSVG(n, 75)}
 					<div
 						style={{
 							width: 170,
-							height: 85,
+							height: 65,
 							border: "1px solid black",
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
+							marginLeft: 5,
+							padding: 5,
 						}}
 					>
 						{data.find((o) => o.id === n)?.german_name}
