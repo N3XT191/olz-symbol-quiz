@@ -1,4 +1,6 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" width="39.6875" height="39.6875" viewBox="0 0 1.5875 1.5875">
-  <path d="m0.49093,1.25447c-0.21001,-0.21001 -0.21142,-0.55226 0,-0.76368 0.21072,-0.21072 0.55367,-0.21001 0.76368,0" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.27000001" stroke="#00ffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 5.3 5.3">
+  <g transform="translate(1.86,1.86)">
+    <path d="m0.49093,1.25447c-0.21001,-0.21001 -0.21142,-0.55226 0,-0.76368 0.21072,-0.21072 0.55367,-0.21001 0.76368,0" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.27000001" stroke="#00ffff"/>
+  </g>
 </svg>

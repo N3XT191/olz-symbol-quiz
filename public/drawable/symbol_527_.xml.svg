@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
-<svg xmlns="http://www.w3.org/2000/svg" width="52.916624999999996" height="52.916624999999996" viewBox="0 0 2.116665 2.116665">
-  <path d="m1.05834,0.44335l0,1.23" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.23999998" stroke="#000000"/>
-  <path d="m0.44333,0.79934 l0.615,-0.356 0.615,0.356" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.23999998" stroke="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 5.3 5.3">
+  <g transform="translate(1.59,1.59)">
+    <path d="m1.05834,0.44335l0,1.23" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.23999998" stroke="#000000"/>
+    <path d="m0.44333,0.79934 l0.615,-0.356 0.615,0.356" fill="#00000000" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.23999998" stroke="#000000"/>
+  </g>
 </svg>
