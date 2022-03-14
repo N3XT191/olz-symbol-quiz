@@ -87,7 +87,7 @@ const Quiz = ({ category }: { category: number }) => {
 		setCorrectGuessCount(correctGuessCount + 1);
 	};
 
-	const [mode, setMode] = useState<"pic" | "desc">("pic");
+	const [mode, setMode] = useState<"pic" | "desc">("desc");
 
 	return (
 		<div
@@ -136,12 +136,12 @@ const Quiz = ({ category }: { category: number }) => {
 			</div>
 			{mode === "pic" ? (
 				<>
-					{makeSVG(chosenNumbers[0], 200)}
-					<div style={{ width: 364, display: "flex", flexWrap: "wrap" }}>
+					{makeSVG(chosenNumbers[0], 120)}
+					<div style={{ maxWidth: 332, display: "flex", flexWrap: "wrap" }}>
 						{shuffledNumbers.map((n, i) => (
 							<div
 								style={{
-									width: 160,
+									width: 140,
 									height: 80,
 									border: "1px solid black",
 									display: "flex",
@@ -150,6 +150,8 @@ const Quiz = ({ category }: { category: number }) => {
 									backgroundColor: wrongGuesses[i] ? "red" : "white",
 									margin: 5,
 									padding: 5,
+
+									flexWrap: "wrap",
 								}}
 								onClick={() => {
 									if (n === chosenNumbers[0]) {
@@ -168,12 +170,14 @@ const Quiz = ({ category }: { category: number }) => {
 				<>
 					<div
 						style={{
-							width: 170,
-							height: 85,
+							width: 156,
+							height: 75,
 							border: "1px solid black",
 							display: "flex",
 							justifyContent: "center",
 							alignItems: "center",
+							padding: 5,
+							flexWrap: "wrap",
 						}}
 					>
 						{data.find((o) => o.id === chosenNumbers[0])?.german_name}
