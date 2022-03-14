@@ -34,7 +34,7 @@ const ShowAll = () => {
 			}}
 		>
 			<button
-				style={{ fontSize: 15, marginRight: 10 }}
+				style={{ fontSize: 15, marginBottom: 10 }}
 				onClick={() => {
 					window.location.search = "";
 				}}
@@ -68,7 +68,7 @@ const ShowAll = () => {
 				</div>
 			))}
 			<button
-				style={{ fontSize: 15, marginRight: 10 }}
+				style={{ fontSize: 15, marginTop: 5, marginBottom: 10 }}
 				onClick={() => {
 					window.location.search = "";
 				}}
