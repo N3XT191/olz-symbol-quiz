@@ -1,27 +1,17 @@
 import { useEffect, useState } from "react";
 import data from "./data/data.json";
 
-function shuffle(array: any[]) {
-	let currentIndex = array.length,
-		randomIndex;
-
-	// While there remain elements to shuffle...
-	while (currentIndex !== 0) {
-		// Pick a remaining element...
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex--;
-
-		// And swap it with the current element.
-		[array[currentIndex], array[randomIndex]] = [
-			array[randomIndex],
-			array[currentIndex],
-		];
-	}
-
-	return array;
+function shuffle(array: any[], weights: number[]) {
+	let newArray = array.map((o, i) => ({
+		value: o,
+		rank: Math.random() / weights[i],
+	}));
+	let sorted = newArray.sort((a, b) => b.rank - a.rank).map((o) => o.value);
+	console.log(weights.sort((a, b) => b - a));
+	return sorted;
 }
 
-const numbers = [[], [], [], [], [], []] as any[][];
+const numbers = [[], [], [], [], [], []] as number[][];
 data.forEach((o) => {
 	let categorie = Math.floor(o.id / 100) - 1;
 	if (categorie === 5) {
@@ -33,11 +23,21 @@ data.forEach((o) => {
 	numbers[categorie].push(o.id);
 });
 
-console.log(numbers);
+interface IDictionary<TValue> {
+	[id: string]: TValue;
+}
+
+const history = {} as IDictionary<number>;
+numbers.forEach((category) =>
+	category.forEach((number) => {
+		history[number] = 1;
+	})
+);
 
 const getRandom4Numbers = (category: number) => {
 	if (category === 99) category = Math.floor(Math.random() * numbers.length);
-	const shuffled = shuffle([...numbers[category]]);
+	const weights = numbers[category].map((n) => history[n]);
+	const shuffled = shuffle([...numbers[category]], weights);
 	return shuffled.slice(0, 4);
 };
 
@@ -60,13 +60,10 @@ const Quiz = ({ category }: { category: number }) => {
 		[...chosenNumbers].sort((a, b) => 0.5 - Math.random())
 	);
 
-	useEffect(
-		() =>
-			setShuffledNumbers(
-				[...chosenNumbers].sort((a, b) => 0.5 - Math.random())
-			),
-		[chosenNumbers]
-	);
+	useEffect(() => {
+		setShuffledNumbers([...chosenNumbers].sort((a, b) => 0.5 - Math.random()));
+		history[chosenNumbers[0]] += 1;
+	}, [chosenNumbers]);
 
 	const [wrongGuesses, setWrongGuesses] = useState([
 		false,
