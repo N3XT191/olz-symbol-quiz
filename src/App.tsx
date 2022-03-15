@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Quiz from "./Quiz";
 import ShowAll from "./ShowAll";
 
@@ -45,7 +46,7 @@ function App() {
 		>
 			<div
 				style={{
-					backgroundColor: "#00c800",
+					backgroundColor: "#2ea44f",
 					width: "100%",
 					height: 70,
 					display: "flex",
@@ -72,16 +73,11 @@ function App() {
 					}}
 				>
 					{buttonTexts.map((s, i) => (
-						<button
-							style={{ fontSize: 15, marginBottom: 10 }}
-							onClick={() => setCategory(i - 1)}
-						>
-							{s}
-						</button>
+						<Button onClick={() => setCategory(i - 1)}>{s}</Button>
 					))}
-					<div>oder</div>
-					<button
-						style={{ fontSize: 15, marginTop: 10 }}
+					<div style={{ marginBottom: 10 }}>oder</div>
+
+					<Button
 						onClick={() => {
 							let search = window.location.search;
 							let params = new URLSearchParams(search);
@@ -91,7 +87,7 @@ function App() {
 						}}
 					>
 						Alle Symbole auflisten
-					</button>
+					</Button>
 				</div>
 			) : (
 				<ShowAll />

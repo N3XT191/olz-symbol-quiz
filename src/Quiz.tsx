@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Button from "./Button";
 import data from "./data/data.json";
 
 function shuffle(array: any[], weights: number[]) {
@@ -98,16 +99,14 @@ const Quiz = ({ category }: { category: number }) => {
 			}}
 		>
 			<div>
-				<button
-					style={{ fontSize: 15, marginRight: 10 }}
+				<Button
 					onClick={() => {
 						window.location.search = "";
 					}}
 				>
 					Kategorie wählen
-				</button>
-				<button
-					style={{ fontSize: 15, marginRight: 10 }}
+				</Button>
+				<Button
 					onClick={() => {
 						setMode("pic");
 						onCorrectGuess();
@@ -115,9 +114,8 @@ const Quiz = ({ category }: { category: number }) => {
 					disabled={mode === "pic"}
 				>
 					Symbol
-				</button>
-				<button
-					style={{ fontSize: 15 }}
+				</Button>
+				<Button
 					onClick={() => {
 						setMode("desc");
 						onCorrectGuess();
@@ -125,7 +123,7 @@ const Quiz = ({ category }: { category: number }) => {
 					disabled={mode === "desc"}
 				>
 					Name
-				</button>
+				</Button>
 			</div>
 			<div style={{ margin: 5 }}>
 				Richtige Antworten: {correctGuessCount}, Falsche Antwortern:{" "}

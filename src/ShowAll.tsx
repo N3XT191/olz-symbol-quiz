@@ -1,3 +1,4 @@
+import Button from "./Button";
 import data from "./data/data.json";
 
 const numbers = [[], [], [], [], [], []] as any[][];
@@ -33,14 +34,14 @@ const ShowAll = () => {
 				paddingRight: 5,
 			}}
 		>
-			<button
-				style={{ fontSize: 15, marginBottom: 10 }}
+			<Button
 				onClick={() => {
 					window.location.search = "";
 				}}
 			>
 				Zurück
-			</button>
+			</Button>
+
 			{numbers.flat().map((n) => (
 				<div
 					style={{
@@ -67,14 +68,13 @@ const ShowAll = () => {
 					</div>
 				</div>
 			))}
-			<button
-				style={{ fontSize: 15, marginTop: 5, marginBottom: 10 }}
+			<Button
 				onClick={() => {
 					window.location.search = "";
 				}}
 			>
 				Zurück
-			</button>
+			</Button>
 		</div>
 	);
 };
