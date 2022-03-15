@@ -32,6 +32,7 @@ const Button = (props: React.PropsWithChildren<Props>) => (
 			marginBottom: 10,
 			marginRight: 5,
 			marginLeft: 5,
+			marginTop: 0,
 			WebkitAppearance: "none",
 			WebkitBorderRadius: 6,
 		}}

@@ -3,13 +3,13 @@ import Quiz from "./Quiz";
 import ShowAll from "./ShowAll";
 
 const buttonTexts = [
-	"Alle",
-	"Geländeformen",
-	"Felsen und Steine",
-	"Gewässer und Sümpfe",
-	"Vegetation",
-	"Künstliche Objekte",
-	"Bahnsymbole",
+	{ text: "Alle", icon: 0 },
+	{ text: "Geländeformen", icon: 104 },
+	{ text: "Felsen und Steine", icon: 206 },
+	{ text: "Gewässer und Sümpfe", icon: 310 },
+	{ text: "Vegetation", icon: 414 },
+	{ text: "Künstliche Objekte", icon: 519 },
+	{ text: "Bahnsymbole", icon: 706 },
 ];
 
 function App() {
@@ -69,11 +69,22 @@ function App() {
 						display: "flex",
 						flexDirection: "column",
 						justifyContent: "center",
-						alignItems: "center",
 					}}
 				>
 					{buttonTexts.map((s, i) => (
-						<Button onClick={() => setCategory(i - 1)}>{s}</Button>
+						<div style={{ display: "flex" }}>
+							<img
+								alt="test"
+								src={
+									s.icon
+										? "/drawable/symbol_" + s.icon + "_.xml.svg"
+										: "/flag.png"
+								}
+								width={32}
+								height={32}
+							/>
+							<Button onClick={() => setCategory(i - 1)}>{s.text}</Button>
+						</div>
 					))}
 					<div style={{ marginBottom: 10 }}>oder</div>
 
