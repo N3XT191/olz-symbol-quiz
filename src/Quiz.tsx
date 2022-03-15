@@ -232,7 +232,7 @@ const Quiz = ({ category }: { category: number }) => {
 									}
 								}}
 							>
-								{makeSVG(n, 75)}
+								{makeSVG(n, 80)}
 							</div>
 						))}
 					</div>
