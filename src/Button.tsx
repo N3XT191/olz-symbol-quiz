@@ -9,7 +9,6 @@ const Button = (props: React.PropsWithChildren<Props>) => (
 			appearance: "none",
 			backgroundColor: props.disabled ? "#9fd2a5" : "#2e963d",
 			border: "none",
-			outline: props.disabled ? "none" : "1px solid rgba(27, 31, 35, .15)",
 			//backgroundImage: props.disabled
 			//	? "none"
 			//	: "linear-gradient(200deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0))",
@@ -33,6 +32,8 @@ const Button = (props: React.PropsWithChildren<Props>) => (
 			marginBottom: 10,
 			marginRight: 5,
 			marginLeft: 5,
+			WebkitAppearance: "none",
+			WebkitBorderRadius: 6,
 		}}
 		disabled={props.disabled}
 	>
