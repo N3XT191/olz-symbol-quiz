@@ -39,8 +39,6 @@ function App() {
 				flexDirection: "column",
 				margin: "auto",
 				alignItems: "center",
-				paddingLeft: 5,
-				paddingRight: 5,
 				maxWidth: 500,
 			}}
 		>
