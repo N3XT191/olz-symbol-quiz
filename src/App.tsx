@@ -80,13 +80,20 @@ function App() {
 										? "/drawable/symbol_" + s.icon + "_.xml.svg"
 										: "/flag.png"
 								}
-								width={32}
-								height={32}
+								width={40}
+								height={40}
 							/>
-							<Button onClick={() => setCategory(i - 1)}>{s.text}</Button>
+							<Button
+								onClick={() => setCategory(i - 1)}
+								style={{ height: 40, lineHeight: "20px" }}
+							>
+								{s.text}
+							</Button>
 						</div>
 					))}
-					<div style={{ marginBottom: 10 }}>oder</div>
+					<div style={{ margin: "auto", marginBottom: 10, fontSize: 20 }}>
+						oder
+					</div>
 
 					<Button
 						onClick={() => {

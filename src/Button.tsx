@@ -1,6 +1,7 @@
 interface Props {
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
 	disabled?: boolean;
+	style?: { [index: string]: any };
 }
 const Button = (props: React.PropsWithChildren<Props>) => (
 	<button
@@ -35,6 +36,7 @@ const Button = (props: React.PropsWithChildren<Props>) => (
 			marginTop: 0,
 			WebkitAppearance: "none",
 			WebkitBorderRadius: 6,
+			...props.style,
 		}}
 		disabled={props.disabled}
 	>

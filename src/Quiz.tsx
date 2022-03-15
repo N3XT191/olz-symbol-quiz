@@ -125,14 +125,44 @@ const Quiz = ({ category }: { category: number }) => {
 					Name
 				</Button>
 			</div>
-			<div style={{ margin: 5 }}>
-				Richtige Antworten: {correctGuessCount}, Falsche Antwortern:{" "}
-				{wrongGuessCount}
+			<div
+				style={{
+					display: "flex",
+					marginBottom: 10,
+				}}
+			>
+				<div
+					style={{
+						margin: 5,
+						border: "3px solid green",
+						borderRadius: 6,
+						padding: 5,
+					}}
+				>
+					Korrekt: {correctGuessCount}
+				</div>
+				<div
+					style={{
+						margin: 5,
+						border: "3px solid red",
+						borderRadius: 6,
+						padding: 5,
+					}}
+				>
+					Falsch: {wrongGuessCount}
+				</div>
 			</div>
 			{mode === "pic" ? (
 				<>
 					{makeSVG(chosenNumbers[0], 120)}
-					<div style={{ maxWidth: 332, display: "flex", flexWrap: "wrap" }}>
+					<div
+						style={{
+							maxWidth: 332,
+							display: "flex",
+							flexWrap: "wrap",
+							marginTop: 10,
+						}}
+					>
 						{shuffledNumbers.map((n, i) => (
 							<div
 								style={{
@@ -176,11 +206,12 @@ const Quiz = ({ category }: { category: number }) => {
 							padding: 5,
 							flexWrap: "wrap",
 							backgroundColor: "rgb(256,256,256,0.6)",
+							marginBottom: 10,
 						}}
 					>
 						{data.find((o) => o.id === chosenNumbers[0])?.german_name}
 					</div>
-					<div style={{ width: 200, display: "flex", flexWrap: "wrap" }}>
+					<div style={{ width: 240, display: "flex", flexWrap: "wrap" }}>
 						{shuffledNumbers.map((n, i) => (
 							<div
 								style={{
@@ -188,9 +219,9 @@ const Quiz = ({ category }: { category: number }) => {
 										? "red"
 										: "rgb(256,256,256,0.4)",
 									border: "2px solid " + (wrongGuesses[i] ? "red" : "black"),
-									height: 75,
-									width: 75,
-									margin: 5,
+									height: 80,
+									width: 80,
+									margin: 10,
 									padding: 5,
 								}}
 								onClick={() => {
