@@ -46,7 +46,7 @@ function App() {
 		>
 			<div
 				style={{
-					backgroundColor: "#2ea44f",
+					backgroundColor: "#2e963d",
 					width: "100%",
 					height: 70,
 					display: "flex",

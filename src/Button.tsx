@@ -7,7 +7,7 @@ const Button = (props: React.PropsWithChildren<Props>) => (
 		onClick={props.onClick}
 		style={{
 			appearance: "none",
-			backgroundColor: props.disabled ? "#9fd2a5" : "#2ea44f",
+			backgroundColor: props.disabled ? "#9fd2a5" : "#2e963d",
 			border: "none",
 			outline: props.disabled ? "none" : "1px solid rgba(27, 31, 35, .15)",
 			//backgroundImage: props.disabled
