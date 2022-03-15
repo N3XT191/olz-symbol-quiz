@@ -134,7 +134,7 @@ const Quiz = ({ category }: { category: number }) => {
 				<div
 					style={{
 						margin: 5,
-						border: "3px solid green",
+						border: "3px solid #2e963d",
 						borderRadius: 6,
 						padding: 5,
 					}}
