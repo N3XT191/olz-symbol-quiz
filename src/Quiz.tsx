@@ -86,6 +86,10 @@ const Quiz = () => {
 		setWrongGuesses([false, false, false, false]);
 		setCorrectGuessCount(correctGuessCount + 1);
 	};
+	const onModeSwitch = () => {
+		setChosenNumbers(getRandom4Numbers(categoryNumber));
+		setWrongGuesses([false, false, false, false]);
+	};
 
 	const [mode, setMode] = useState<"pic" | "desc">("desc");
 
@@ -107,7 +111,7 @@ const Quiz = () => {
 				<Button
 					onClick={() => {
 						setMode("pic");
-						onCorrectGuess();
+						onModeSwitch();
 					}}
 					disabled={mode === "pic"}
 				>
@@ -116,7 +120,7 @@ const Quiz = () => {
 				<Button
 					onClick={() => {
 						setMode("desc");
-						onCorrectGuess();
+						onModeSwitch();
 					}}
 					disabled={mode === "desc"}
 				>
