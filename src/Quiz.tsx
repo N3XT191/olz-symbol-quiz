@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import Button from "./Button";
 import data from "./data/data.json";
 
@@ -51,9 +52,12 @@ const makeSVG = (n: number, size: number) => (
 	/>
 );
 
-const Quiz = ({ category }: { category: number }) => {
+const Quiz = () => {
+	let { category } = useParams<"category">();
+	let categoryNumber = parseInt(category!);
+	console.log(categoryNumber);
 	const [chosenNumbers, setChosenNumbers] = useState(
-		getRandom4Numbers(category)
+		getRandom4Numbers(categoryNumber)
 	);
 	const [correctGuessCount, setCorrectGuessCount] = useState(0);
 	const [wrongGuessCount, setWrongGuessCount] = useState(0);
@@ -80,7 +84,7 @@ const Quiz = ({ category }: { category: number }) => {
 		setWrongGuessCount(wrongGuessCount + 1);
 	};
 	const onCorrectGuess = () => {
-		setChosenNumbers(getRandom4Numbers(category));
+		setChosenNumbers(getRandom4Numbers(categoryNumber));
 		setWrongGuesses([false, false, false, false]);
 		setCorrectGuessCount(correctGuessCount + 1);
 	};
@@ -99,13 +103,9 @@ const Quiz = ({ category }: { category: number }) => {
 			}}
 		>
 			<div>
-				<Button
-					onClick={() => {
-						window.location.search = "";
-					}}
-				>
-					Kategorie wählen
-				</Button>
+				<Link to="/">
+					<Button>Kategorie wählen</Button>
+				</Link>
 				<Button
 					onClick={() => {
 						setMode("pic");

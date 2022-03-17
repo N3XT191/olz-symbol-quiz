@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import data from "./data/data.json";
 
@@ -34,13 +35,9 @@ const ShowAll = () => {
 				paddingRight: 5,
 			}}
 		>
-			<Button
-				onClick={() => {
-					window.location.search = "";
-				}}
-			>
-				Zurück
-			</Button>
+			<Link to="/">
+				<Button>Zurück</Button>
+			</Link>
 
 			{numbers.flat().map((n) => (
 				<div
@@ -68,13 +65,9 @@ const ShowAll = () => {
 					</div>
 				</div>
 			))}
-			<Button
-				onClick={() => {
-					window.location.search = "";
-				}}
-			>
-				Zurück
-			</Button>
+			<Link to="/">
+				<Button>Zurück</Button>
+			</Link>
 		</div>
 	);
 };

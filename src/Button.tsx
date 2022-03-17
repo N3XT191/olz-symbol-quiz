@@ -1,5 +1,5 @@
 interface Props {
-	onClick: React.MouseEventHandler<HTMLButtonElement>;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	disabled?: boolean;
 	style?: { [index: string]: any };
 }
