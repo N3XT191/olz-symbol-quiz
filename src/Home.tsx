@@ -12,7 +12,7 @@ const buttonTexts = [
 ];
 
 const makeButton = (s: { icon: number; text: string }, i: number) => (
-	<div style={{ display: "flex" }}>
+	<div style={{ display: "flex" }} key={s.text}>
 		<img
 			alt="test"
 			src={s.icon ? "/drawable/symbol_" + s.icon + "_.xml.svg" : "/flag.png"}

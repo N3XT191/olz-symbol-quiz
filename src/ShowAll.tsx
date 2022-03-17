@@ -41,6 +41,7 @@ const ShowAll = () => {
 
 			{numbers.flat().map((n) => (
 				<div
+					key={n}
 					style={{
 						display: "flex",
 						justifyContent: "center",

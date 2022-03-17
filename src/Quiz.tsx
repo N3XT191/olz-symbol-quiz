@@ -9,7 +9,6 @@ function shuffle(array: any[], weights: number[]) {
 		rank: Math.random() / weights[i],
 	}));
 	let sorted = newArray.sort((a, b) => b.rank - a.rank).map((o) => o.value);
-	console.log(weights.sort((a, b) => b - a));
 	return sorted;
 }
 
@@ -55,7 +54,6 @@ const makeSVG = (n: number, size: number) => (
 const Quiz = () => {
 	let { category } = useParams<"category">();
 	let categoryNumber = parseInt(category!);
-	console.log(categoryNumber);
 	const [chosenNumbers, setChosenNumbers] = useState(
 		getRandom4Numbers(categoryNumber)
 	);
@@ -165,6 +163,7 @@ const Quiz = () => {
 					>
 						{shuffledNumbers.map((n, i) => (
 							<div
+								key={n}
 								style={{
 									width: 140,
 									height: 80,
@@ -214,6 +213,7 @@ const Quiz = () => {
 					<div style={{ width: 240, display: "flex", flexWrap: "wrap" }}>
 						{shuffledNumbers.map((n, i) => (
 							<div
+								key={n}
 								style={{
 									backgroundColor: wrongGuesses[i]
 										? "red"
